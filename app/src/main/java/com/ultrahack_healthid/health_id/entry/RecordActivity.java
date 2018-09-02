@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.gson.Gson;
@@ -76,11 +77,18 @@ public class RecordActivity extends AppCompatActivity {
         record.setDetail(details.getText().toString());
         record.setUrgency(urgency.getSelectedItem().toString());
         record.setSummary(summary.getText().toString());
-        
+
+
+
         HashMap<String, Integer> medicine = new HashMap<>();
-        medicine.put(medicine1.getText().toString(), (Integer.parseInt(quanitity1.getText().toString())));
-        medicine.put(medicine2.getText().toString(), (Integer.parseInt(quanitity2.getText().toString())));
-        medicine.put(medicine3.getText().toString(), (Integer.parseInt(quanitity3.getText().toString())));
+        try {
+            medicine.put(medicine1.getText().toString(), (Integer.parseInt(quanitity1.getText().toString())));
+            medicine.put(medicine2.getText().toString(), (Integer.parseInt(quanitity2.getText().toString())));
+            medicine.put(medicine3.getText().toString(), (Integer.parseInt(quanitity3.getText().toString())));
+        } catch (NumberFormatException e){
+            e.printStackTrace();
+        }
+
 
 
         Prescription prescription = new Prescription();

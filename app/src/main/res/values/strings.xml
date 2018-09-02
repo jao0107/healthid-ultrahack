@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">health-id</string>
+    <string name="app_name">Health ID 2.0</string>
     <string name="string">%s</string>
     <string-array name="spinnerlist">
         <item>Low</item>

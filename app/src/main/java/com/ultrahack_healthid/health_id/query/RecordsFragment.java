@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -54,6 +55,7 @@ public class RecordsFragment extends Fragment {
 
         // specify an adapter (see also next example)
         currentRecords("01");
+
         return super.onCreateView(inflater, container, savedInstanceState);
     }
 
@@ -62,7 +64,6 @@ public class RecordsFragment extends Fragment {
         fireUtil.getDatabaseReference().child("/patients/01/records").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
                 for (DataSnapshot s: dataSnapshot.getChildren()) {
                     Log.d(TAG, "onDataChange: " + s.getValue().toString());
                     temp.add(s.getValue(Record.class));

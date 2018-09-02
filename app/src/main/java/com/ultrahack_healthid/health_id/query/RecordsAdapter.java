@@ -88,9 +88,17 @@ public class RecordsAdapter extends RecyclerView.Adapter<RecordsAdapter.MyViewHo
         //set prescription status
         ((TextView) holder.view.findViewById(R.id.status)).setText(record.getPrescription().getStatus());
 
-        //set prescription
-        String prescription = record.getPrescription().getMedicine().toString();
-        ((TextView) holder.view.findViewById(R.id.medicine)).setText(prescription.substring(1,prescription.length()-1).replace(",","\n"));
+
+        try{
+            //set prescription
+            String prescription = record.getPrescription().getMedicine().toString();
+            prescription = prescription.replace(",","\n");
+            ((TextView) holder.view.findViewById(R.id.medicine)).setText(prescription.substring(1,prescription.length()-1).replace(",","\n"));
+        } catch (NullPointerException e){
+            e.printStackTrace();
+        }
+
+
 
     }
 }

@@ -14,10 +14,13 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.ultrahack_healthid.health_id.FireUtil;
 import com.ultrahack_healthid.health_id.R;
 import com.ultrahack_healthid.health_id.entry.RecordActivity;
+
+import org.w3c.dom.Text;
 
 import java.util.Date;
 
@@ -25,7 +28,8 @@ public class QueryActivity extends AppCompatActivity {
 
     private static final String TAG = "QueryActivity";
     private FireUtil fireUtil;
-    Button button;
+    private Button button;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         setContentView(R.layout.activity_query);
@@ -58,6 +62,8 @@ public class QueryActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 smsLayout.setVisibility(View.GONE);
+                TextView textView = findViewById(R.id.patientName);
+                textView.setText(getString(R.string.string,"SANTOS, JUAN D."));
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.frame, fragment).commit();
             }
