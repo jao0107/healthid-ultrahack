@@ -56,7 +56,7 @@ public class RegisterActivity extends AppCompatActivity {
         // /posts/$postid simultaneously
         //String key = mDatabase.child("healthid/patients/").child(patientID).getKey();
         Patient patient = new Patient(patientID, name, birthday,telephone);
-        fireUtil.getDatabaseReference().child("healthid/patients/"+patientID).setValue(patient).addOnSuccessListener(new OnSuccessListener<Void>() {
+        fireUtil.getDatabaseReference().child("/patients/"+patientID).setValue(patient).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
                 Toast.makeText(RegisterActivity.this,"Successfully Added Patient" ,Toast.LENGTH_SHORT).show();

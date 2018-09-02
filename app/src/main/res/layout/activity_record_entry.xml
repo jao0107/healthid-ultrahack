@@ -107,7 +107,7 @@
                 android:layout_marginTop="0dp"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="Medicine" />
+                android:hint="Medicine" />
 
             <EditText
                 android:id="@+id/quantity_entry"
@@ -117,7 +117,7 @@
                 android:layout_marginStart="0dp"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="1"
+                android:hint="Quantity"
                 tools:layout_editor_absoluteY="363dp" />
         </TableRow>
 
@@ -133,8 +133,7 @@
                 android:layout_marginStart="0dp"
                 android:layout_marginTop="0dp"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Medicine2" />
+                android:inputType="textPersonName" />
 
             <EditText
                 android:id="@+id/quantity_entry2"
@@ -144,7 +143,6 @@
                 android:layout_marginStart="0dp"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="2"
                 tools:layout_editor_absoluteY="363dp" />
         </TableRow>
         <TableRow
@@ -159,8 +157,7 @@
                 android:layout_marginStart="0dp"
                 android:layout_marginTop="0dp"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Medicine" />
+                android:inputType="textPersonName" />
 
             <EditText
                 android:id="@+id/quantity_entry3"
@@ -170,7 +167,6 @@
                 android:layout_marginStart="0dp"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="3"
                 tools:layout_editor_absoluteY="363dp" />
         </TableRow>
         <TableRow
@@ -185,8 +181,7 @@
                 android:layout_marginStart="0dp"
                 android:layout_marginTop="0dp"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Medicine" />
+                android:inputType="textPersonName" />
 
             <EditText
                 android:id="@+id/quantity_entry4"

@@ -35,8 +35,8 @@ public class QueryActivity extends AppCompatActivity {
         final Button smsConfirm = findViewById(R.id.smsConfirmButton);
         FloatingActionButton floatingActionButton = findViewById(R.id.fab_add_entry);
 
-        final Fragment fragment = new RecordsFragment();
 
+        final Fragment fragment = new RecordsFragment();
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
